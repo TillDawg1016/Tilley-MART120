@@ -1,0 +1,11 @@
+span{
+    background-color: rgb(31, 31, 74);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#specificColor{
+    color:green;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:24px;
+ }
