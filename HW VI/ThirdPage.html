@@ -1,24 +1,52 @@
 <html>
     <head>
         <title>ThirdPage</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script>
+		    function checkit(){
+			    if(document.getElementById("firstname").value == ""){
+				    document.getElementById("firstname").style.backgroundColor = "red"
+                    document.getElementById("required1").innerHTML = "* required"
+			    }
+                if(document.getElementById("lastname").value == ""){
+				    document.getElementById("lastname").style.backgroundColor = "red"
+                    document.getElementById("required2").innerHTML = "* required"
+			    }
+                if(document.getElementById("email").value == ""){
+				    document.getElementById("email").style.backgroundColor = "red"
+                    document.getElementById("required3").innerHTML = "* required"
+			    }
+                if(document.getElementById("yes").checked == ""){
+                    document.getElementById("required4").innerHTML = "* required"
+			    }
+		    }
+	    </script>
     </head>
 
     <body>
         <h1>Contact Us</h1>
         <p>
-            <form action = "file.html">
-             <span id="specificColor">First Name:<input type = "text" id = "firstname"></span> <br>
-            Last Name:<input type = "text" id = "lastname"> <br>
-            Email:<input type = "text" id = "email"> <br>
-            Did you read the above?<input type = "checkbox" id = "Did you read that?"> <br>
-            Do you agree? Yes<input type = "radio" name = "pick" id = "yes">
-            No<input type = "radio" name = "pick" id = "no">
+            <form>
+                First Name:<input type = "text" id = "firstname"><span id = "required1"></span>
+                <br>
+                Last Name:<input type = "text" id = "lastname"><span id = "required2"></span>
+                <br> 
+                Email:<input type = "text" id = "email"><span id = "required3"></span>
+                <br>
+                Terms of Agreement: Don't suck. Be rad. Stay fresh.
+                <br>
+                Do you agree? Yes<input type = "radio" name = "pick" id = "yes">
+                No<input type = "radio" name = "pick" id = "no"><span id = "required4"></span>
+                <br>
+                <button type="button" onclick = "checkit()">You're Done!</button>
             </form>
         </p>
         <p>
-            <a href = "file:///Users/tillbill/Documents/GitHub/Tilley-MART120/HW%20V/index.html">Home Page</a> <br>
-            <a href = "file:///Users/tillbill/Documents/GitHub/Tilley-MART120/HW%20V/SecondPage.html">Good Night Gorilla</a>
+            <a href = "index.html">Home Page</a>
+            <br>
+            <a href = "SecondPage.html">Good Night Gorilla</a>
         </p>
     </body>
+
+
 </html
